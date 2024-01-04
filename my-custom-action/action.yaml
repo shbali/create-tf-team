@@ -1,0 +1,13 @@
+# action.yml
+name: 'Create TEAM'
+description: 'A custom GitHub Action to create Team on Terraform entreprise'
+inputs:
+  team_name:
+    description: 'The team name to be created.'
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - run: create-team.sh ${team_name}
+      shell: bash
+
