@@ -1,12 +1,12 @@
-
-name: TFE create TEAM 
+name: TFE Create Terraform workspace and team
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
-      team: 
-        required: true 
+      team:
+        required: true
         type: string
-        description: team name 
+        description: team name
+        
 jobs:
   teams:
     runs-on: ubuntu-latest
@@ -19,3 +19,4 @@ jobs:
         uses: ./my-custom-action
         with:
           team_name: 'team4'
+
