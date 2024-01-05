@@ -23,4 +23,4 @@ jobs:
         uses: ./my-custom-action
         with:
           team_name: 'team4'
-          tfe_token: $${{ secrets.TFE_TOKEN }}
+          tfe_token: "$${{ secrets.TFE_TOKEN }}"
