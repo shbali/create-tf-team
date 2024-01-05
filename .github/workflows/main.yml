@@ -1,15 +1,18 @@
-
-name: TFE create TEAM 
+name: TFE Create Terraform workspace and team
 on:
-  workflow_call:
-    input:
-      team: 
-        required: true 
+  workflow_dispatch:
+    inputs:
+      team:
+        required: true
         type: string
-        description: team name 
+        description: team name
+      
 jobs:
   teams:
     runs-on: ubuntu-latest
+    env: 
+      TFE_ADDR: app.terraform.io 
+      TFE_ORG: shb-1988
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
