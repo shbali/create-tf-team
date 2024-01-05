@@ -2,9 +2,12 @@
 name: My Workflow
 
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
+    input:
+      team: 
+        required: true 
+        type: string
+        description: team name 
 
 jobs:
   my-job:
