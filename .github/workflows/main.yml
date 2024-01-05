@@ -2,7 +2,7 @@
 name: TFE create TEAM 
 on:
   workflow_call:
-    input:
+    inputs:
       team: 
         required: true 
         type: string
