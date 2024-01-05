@@ -8,8 +8,8 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: chmod 777 create-team.sh 
+    - run: chmod 777 ./my-custom-action/create-team.sh 
       shell: bash
-    - run: create-team.sh ${team_name}
+    - run: ./my-custom-action/create-team.sh  ${team_name}
       shell: bash
 
