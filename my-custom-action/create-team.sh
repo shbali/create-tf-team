@@ -8,8 +8,8 @@
 
 if [ ! -z "$2" ]; then
   token=$2
-  echo "TFE_ORG environment variable was set to $2."
-  echo "Using organization, ${token}."
+  echo "TFE_TOKEN environment variable was set to $2."
+  echo "Using TOKEN, ${token}."
 else
   echo "TFE_TOKEN variable was not set."
   echo "It should be a user or team token that has write or admin"
