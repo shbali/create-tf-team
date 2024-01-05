@@ -15,8 +15,7 @@ else
   echo "It should be a user or team token that has write or admin"
   echo "permission on the workspace."
   echo "Exiting."
-  
-fi
+  exit 1 
 
 # Evaluate $TFE_ORG environment variable
 # If not set, give error and exit
@@ -27,7 +26,7 @@ if [ ! -z "$TFE_ORG" ]; then
 else
   echo "You must export/set the TFE_ORG environment variable."
   echo "Exiting."
-  exit
+  exit 1
 fi
 
 # Evaluate $TFE_ADDR environment variable if it exists
