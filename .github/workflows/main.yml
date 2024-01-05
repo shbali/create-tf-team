@@ -1,6 +1,5 @@
 
-name: My Workflow
-
+name: TFE create TEAM 
 on:
   workflow_call:
     input:
@@ -8,15 +7,12 @@ on:
         required: true 
         type: string
         description: team name 
-
 jobs:
-  my-job:
+  teams:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
 
       - name: Run My Custom Action
         id: my-action
