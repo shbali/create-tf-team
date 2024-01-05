@@ -13,6 +13,6 @@ runs:
   steps:
     - run: chmod 777 ./my-custom-action/create-team.sh 
       shell: bash
-    - run: ./my-custom-action/create-team.sh  ${inputs.team_name} ${inputs.tfe_token}
+    - run: ./my-custom-action/create-team.sh  ${{ inputs.team_name }} ${{ inputs.tfe_token }}
       shell: bash
 
