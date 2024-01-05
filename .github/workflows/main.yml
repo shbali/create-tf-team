@@ -10,6 +10,7 @@ on:
 jobs:
   teams:
     runs-on: ubuntu-latest
+    environment: LOCAL
     env: 
       TFE_ADDR: app.terraform.io 
       TFE_ORG: shb-1988
