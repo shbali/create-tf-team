@@ -1,17 +1,16 @@
 #!/bin/bash
 # Script that creates a Team if it does not already exist, 
 
-# Make sure TFE_TOKEN, TFE_ORG and TFE_ADDR environment variables are set.
+# Make sure TFE_TOKEN, TFE_ORG and TFE_ADDR  variables are set.
 # **TFE_TOKEN** to owners team token. 
 # **TFE_ORG** organization name for the respective TFE environment. 
 # **TFE_ADDR** should be set to the FQDN/URL of the private TFE server.
 
-if [ ! -z "$TFE_TOKEN" ]; then
-  token=$TFE_TOKEN
-  echo "TFE_TOKEN environment variable was found."
+if [ ! -z "$2" ]; then
+  token=$2
+  echo "TFE_TOKEN variable was found."
 else
-  echo "TFE_TOKEN environment variable was not set."
-  echo "You must export/set the TFE_TOKEN environment variable."
+  echo "TFE_TOKEN variable was not set."
   echo "It should be a user or team token that has write or admin"
   echo "permission on the workspace."
   echo "Exiting."
