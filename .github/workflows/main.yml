@@ -14,6 +14,7 @@ jobs:
     env: 
       TFE_ADDR: app.terraform.io 
       TFE_ORG: shb-1988
+      TFE_TOKEN: ${{ secrets.TFE_TOKEN }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2

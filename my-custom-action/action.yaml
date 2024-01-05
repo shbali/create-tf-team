@@ -5,12 +5,12 @@ inputs:
   team_name:
     description: 'The team name to be created.'
     required: true
-
 runs:
   using: "composite"
   steps:
-    - run: chmod 777 ./my-custom-action/create-team.sh 
-      shell: bash
-    - run: ./my-custom-action/create-team.sh  ${{ inputs.team_name }} $${{ secrets.TFE_TOKEN }}
-      shell: bash
+  - shell: bash
 
+    run: |
+      chmod 777 ./my-custom-action/create-team.sh 
+      ./my-custom-action/create-team.sh  ${{ inputs.team_name }}
+      
